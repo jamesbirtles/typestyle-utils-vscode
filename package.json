@@ -1,0 +1,58 @@
+{
+    "name": "typestyle-utils",
+    "version": "0.0.0",
+    "displayName": "TypeStyle Utils",
+    "description": "Utilities for writing TypeStyle",
+    "author": "James Birtles <jameshbirtles@gmail.com>",
+    "publisher": "JamesBirtles",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Other",
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onCommand:typestyle-utils.convertCss"
+    ],
+    "main": "./out/extension.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/UnwrittenFun/typestyle-utils-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/UnwrittenFun/typestyle-utils-vscode/issues"
+    },
+    "homepage": "https://github.com/UnwrittenFun/typestyle-utils-vscode#readme",
+    "contributes": {
+        "commands": [
+            {
+                "command": "typestyle-utils.convertCss",
+                "title": "Convert CSS to TypeStyle"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "yarn run compile"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/lodash": "^4.14.136",
+        "@types/lodash.camelcase": "^4.3.6",
+        "@types/mocha": "^5.2.6",
+        "@types/node": "^10.12.21",
+        "@types/vscode": "^1.36.0",
+        "glob": "^7.1.4",
+        "mocha": "^6.1.4",
+        "tslint": "^5.12.1",
+        "typescript": "^3.3.1",
+        "vscode-test": "^1.0.2"
+    },
+    "dependencies": {
+        "lodash.camelcase": "^4.3.0",
+        "magic-string": "^0.25.3"
+    }
+}
